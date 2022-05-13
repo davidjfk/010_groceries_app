@@ -1,8 +1,15 @@
 import React from 'react'
 
-const ListItem = ({title}) => {
+const ListItem = ({item, onClick}) => {
   return (
-    <div>{title}</div>
+    <li
+      key={item.id}
+      className="list-item"
+      onClick={onClick}
+      value={item.title}
+    >
+      {item.title}
+    </li>
   )
 }
 
