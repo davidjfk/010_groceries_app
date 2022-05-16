@@ -1,15 +1,16 @@
 import React from 'react'
+import { StyledListItem } from './styles/ListItem.styled'
 
-const ListItem = ({item, onClick}) => {
+const ListItem = ({item, onHandleClickGroceryItem}) => {
   return (
-    <li
+    <StyledListItem
       key={item.id}
       className="list-item"
-      onClick={onClick}
       value={item.title}
+      onClick={onHandleClickGroceryItem}
     >
       {item.title}
-    </li>
+    </StyledListItem>
   )
 }
 
