@@ -35,9 +35,9 @@ export class Container extends Component {
             const id = Math.floor(Math.random() * 100000) + 1;
             const newItemInShoppingCart = {id, title: newTitle };
             console.log('new item in shoppingcart')
-            console.log(newItemInShoppingCart)            
-        // 2do: debug why code below does not work.
+            console.log(newItemInShoppingCart)  
 
+        // 2do (later): debug why code below does not work.
         //     console.log('prevState 1b:')
         //     console.log(prevState)
 
@@ -64,18 +64,26 @@ export class Container extends Component {
         //     return newShoppingCartItems;
         // });
 
-        
-          
+    
         this.setState({
             ...this.state,
             shoppingCartItems: [...this.state.shoppingCartItems].concat([newItemInShoppingCart])
         });
     }
     
-    addToGroceryList = () => {
-        console.log('fn addToGroceryList is working') 
-        // skeleton for Part 5:Create an InputField to add items to your shopping list.
-        }
+    addItemToGroceryList = (newTitle) => {
+        console.log(`fn addToGroceryList is working: ${newTitle}`) 
+
+        const id = Math.floor(Math.random() * 100000) + 1;
+        const newItemOnGroceryList = {id, title: newTitle };
+        console.log('new item on grocery list')
+        console.log(newItemOnGroceryList)            
+
+        this.setState({
+            ...this.state,
+            groceryListItems: [...this.state.groceryListItems].concat([newItemOnGroceryList])
+        });
+    }
     
 
     emptyCart = () => {
@@ -99,14 +107,13 @@ export class Container extends Component {
         // console.log(myGroceries)
         // for(let myGrocery of myGroceries){
         //     console.log(myGrocery)
-        //     console.log('bla')
         // }
     }
 
     render() {
         return (
             <StyledContainer>
-                <GroceryList groceryListItems = {this.state.groceryListItems} onHandleClickGroceryItem = {this.handleClickGroceryItem} callback = {this.addToGroceryList}/>
+                <GroceryList groceryListItems = {this.state.groceryListItems} onHandleClickGroceryItem = {this.handleClickGroceryItem} onAddToGroceryList = {this.addItemToGroceryList}/>
                 <ShoppingCart shoppingCartItems = {this.state.shoppingCartItems}  callback = {this.emptyCart}/>
             </StyledContainer>
         )

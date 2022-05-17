@@ -23,6 +23,4 @@ export const StyledListItem = styled.li`
     padding-bottom: 0.2rem;   
 `
 
-
-//  
-// 
+ 
