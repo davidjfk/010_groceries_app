@@ -5,11 +5,11 @@ const ListItem = ({item, onHandleClickGroceryItem}) => {
   return (
     <StyledListItem
       key={item.id}
-      className="list-item"
       value={item.title}
       onClick={onHandleClickGroceryItem}
     >
-      {item.title}
+      <div class="list-item-title">{item.title}</div>
+      {item.amount ? <div>Amount: {item.amount}</div> : <div></div>}
     </StyledListItem>
   )
 }

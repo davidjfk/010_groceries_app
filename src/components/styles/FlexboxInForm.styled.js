@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-// uc: implement flexbox inside a form. 
-export const StyledFormWithFlexbox = styled.div`
+export const StyledFlexBoxInForm = styled.div`
     display: flex;
     flex-direction: column;
     align items: center;
@@ -11,9 +10,7 @@ export const StyledFormWithFlexbox = styled.div`
     & >  button {
         flex: 1;
     }
-
-    margin-left: 17rem;
-    margin-right: 17rem;
-    
-    onSubmit={onSubmit} 
+ 
+    margin-left: ${({marginLeft}) => marginLeft };
+    margin-right: ${({marginRight}) => marginRight};
 `

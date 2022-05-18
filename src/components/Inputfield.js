@@ -7,7 +7,7 @@ const Inputfield = ({text, onSetText}) => {
     return (  
         <StyledInputField 
           type='text'
-          placeholder='Add'
+          placeholder='Please enter grocery item'
           value={text}
           onChange={(e) => onSetText(e.target.value)}
         />  

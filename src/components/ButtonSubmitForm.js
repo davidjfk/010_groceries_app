@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 
 const ButtonSubmitForm = ({text}) => {
   return (
-    //2do later: replace inline styling by styled component. 
     <button         
         style={{
           color: "black", 
           fontSize: "1rem",
-          padding: "0.3rem"}}>
+          padding: "0.3rem",
+          border: "2px solid black",
+          }}>
             {text}
     </button>
   )

@@ -3,14 +3,16 @@ import PropTypes from 'prop-types'
 
 const Button = ({text, myBackgroundColor, callback}) => {
   return (
-    //2do later: replace inline styling by styled component. 
     <button         
         onClick={callback}
         style={{
           backgroundColor: myBackgroundColor, 
           color: "black", 
           fontSize: "1rem",
-          padding: "0.3rem"}}>
+          padding: "0.3rem",
+          minWidth: "209px",
+          border: "2px solid black",
+          }}>
             {text}
     </button>
   )

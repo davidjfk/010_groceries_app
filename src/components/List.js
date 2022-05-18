@@ -6,13 +6,8 @@ import ListItem from './ListItem'
 class List extends Component {
   constructor() {
     super()
-    this.state = {
-      // bla: this.props.onHandleClickGroceryItem
-    }
   }
 
-  
-  
   render() {
     const itemsToDisplay = this.props.items.map(item => 
       <ListItem 

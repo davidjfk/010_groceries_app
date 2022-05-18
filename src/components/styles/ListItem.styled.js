@@ -2,6 +2,12 @@
 import styled from "styled-components";
 
 export const StyledListItem = styled.li`
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding: 12px;
+    justify-content: flex-end;
+    gap: 500px;
 
     :nth-child(2n+1) {
         background-color: ${({theme}) => theme.colorsGroceryList && theme.colorsGroceryList.oddRows};
@@ -9,7 +15,6 @@ export const StyledListItem = styled.li`
     :nth-child(2n) {
     background-color: ${({theme}) => theme.colorsGroceryList && theme.colorsGroceryList.evenRows};
     }
-
 
     :nth-child(2n+1) {
         background-color: ${({theme}) => theme.colorsShoppingCart && theme.colorsShoppingCart.oddRows};
